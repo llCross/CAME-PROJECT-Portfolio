@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-image: url(/assets/parallax-bg.jpg);
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+    position: fixed;
+    width: 100vw;
+}
+
+#home-logo {
+    font-size: 2rem;
+}
+
+#nav-titles {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+#header {
+    background-image: url(/assets/parallax-bg.jpg);
+    /* background-attachment: fixed; */
+    height: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header p {
+    color: white;
+    font-size: 15rem;
+}
