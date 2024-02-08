@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Group Portfolio</title>
@@ -26,18 +29,22 @@
     <main>
         <div id="about">
             
+            <div class="about-title">
+                About Us
+            </div>
+
             <div class="about-img">
                 <img src="/assets/sample.png">
             </div>
 
             <div class="about-container">
-                <h1>About Us</h1>
                 <div class="about-names">
                     <p class="name-link active-link">Berania</p>
                     <p class="name-link">Aggabao</p>
                     <p class="name-link">Yonzon</p>
                     <p class="name-link">Delos Santos</p>
                 </div>
+
                 <div class="about-details active-details" id="berania-details">
                     <p class="about-name">Berania, Patrick Louise O.</p>
                     <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
@@ -45,13 +52,18 @@
                 </div>
                 <div class="about-details" id="aggabao-details">
                     <p class="about-name">Aggabao, Jericho</p>
-                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
-                    <p  class="about-motto">"Try and try until you die"</p>
+                    <p  class="about-description"> I am ambitious and driven. I thrive on challenges and constantly set goals for myself, 
+                        so I have something to strive toward. I'm not comfortable with settling, and I'm always looking for an opportunity 
+                        to do better and achieve greatness. </p>
+                    <p  class="about-motto">"All is well!"</p>
                 </div>
                 <div class="about-details" id="yonzon-details">
                     <p class="about-name">Yonzon, Rolando</p>
-                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
-                    <p  class="about-motto">"Try and try until you die"</p>
+                    <p  class="about-description">I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, <br>
+                        self-motivated, reliable, responsible
+                        and hard working person. I responded to unexpected events with speed and professionalism to ensure a positive
+                        outcome for our customers.</p>
+                    <p  class="about-motto">"Risk something or forever sit with your dreams"</p>
                 </div>
                 <div class="about-details" id="delossantos-details">
                     <p class="about-name">Delos Santos, Arnold</p>
@@ -114,19 +126,45 @@
         </div>
 
         <div id="contact-us">
-            <div class="contact-title">
-                Contact Us!
+            <div class="contact-container">
+                <div class="contact-title">
+                    Contact Us!
+                </div>
+                <div class="email-container">
+                    <div class="contact-emails">
+                        <img src="/assets/email-logo.svg"> patricklouiseoberania@iskolarngbayan.pup.edu.ph
+                    </div>
+                    <div class="contact-emails">
+                        <img src="/assets/email-logo.svg"> jerichoalbertoaggabao@iskolarngbayan.pup.edu.ph
+                    </div>
+                    <div class="contact-emails">
+                        <img src="/assets/email-logo.svg"> rolandoyonzon@iskolarngbayan.pup.edu.ph
+                    </div>
+                    <div class="contact-emails">
+                        <img src="/assets/email-logo.svg"> patricklouiseoberania@iskolarngbayan.pup.edu.ph
+                    </div>
+                </div>
             </div>
+
+            <p>or</p>
+
             <div class="contact-form">
                 <form>
+                    <legend class="form-title">Send us a message!</legend>
+
                     <input type="text" class="form-fields " id="user_name" name="user_name"
                     placeholder="  Your Name" required>
                 
                     <input type="email" class="form-fields" name="user_email" id="user_email"
-                    placeholder="  Your Email" required>
+                    placeholder="  name@example.com" required>
+
+                    <input type="tel" class="form-fields" name="user_tel" id="user_tel"
+                    placeholder="  +63900 000 0000" required>
                 
                     <textarea class="form-text" name="user_message" id="user_message"
                     placeholder=" Your Message" required ></textarea>
+
+                    <button class="submit-button" type="submit">Send</button>
                 </form>
             </div>
         </div>

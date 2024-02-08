@@ -3,10 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
     --accent-color: #ff004f;
+    --background-color: #262626;
+    --title-size: 4rem;
 }
 
 body {
@@ -83,6 +86,13 @@ header p {
     flex-wrap: wrap;
 }
 
+.about-title {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    font-size: var(--title-size);
+}
+
 .about-img {
     height: 100%;
     display: flex;
@@ -97,17 +107,14 @@ header p {
 }
 
 .about-container {
-    height: 90%;
+    border-radius: 50px;
+    height: 80%;
+    width: 95%;
+    background-color: var(--background-color);
 }
 
 .about-container ul li {
     list-style: none;
-}
-
-.about-container h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 4rem;
 }
 
 .about-names {
@@ -138,17 +145,28 @@ header p {
 }
 
 .about-details {
+    margin: 1rem 2rem 0 4rem;
     display: none;
 }
 
 .about-details.active-details {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
+}
+
+.about-description {
+    font-size: 1.5rem;
+}
+
+.about-motto {
+    font-style: italic;
+    font-size: 2rem;
+    text-align: end;
 }
 
 .about-name {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 #highlights {
@@ -160,7 +178,7 @@ header p {
 }
 
 .highlights-title {
-    font-size: 6rem;
+    font-size: var(--title-size);
 }
 
 .highlights-container {
@@ -169,10 +187,10 @@ header p {
 }
 
 .highlights-details {
-    background-color: #ff004f;
+    background-color: var(--background-color);
     border-radius: 50px;
-    width: 500px;
-    height: 500px;
+    width: 25rem;
+    height: 25rem;
 }
 
 #tools {
@@ -184,7 +202,7 @@ header p {
 }
 
 .tools-title {
-    font-size: 4rem;
+    font-size: var(--title-size);
 }
 
 .tools-container {
@@ -205,23 +223,33 @@ header p {
     height: 90vh;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
+}
+
+#contact-us p {
+    font-size: var(--title-size);
 }
 
 .contact-title {
-    font-size: 5rem;
+    font-size: var(--title-size);
+}
+
+.form-title {
+    font-size: var(--title-size);
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
 .form-fields,
 .form-text {
     width: 30rem;
     border-radius: 10px;
+    background-color: var(--background-color);
 }
 
 .form-fields {
@@ -230,4 +258,45 @@ header p {
 
 .form-text {
     height: 10rem;
+}
+
+.submit-button {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.contact-emails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-emails img {
+    width: 2rem;
 }
