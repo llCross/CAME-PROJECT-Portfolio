@@ -174,3 +174,24 @@ header p {
     width: 500px;
     height: 500px;
 }
+
+#tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.tools-title {
+    font-size: 4rem;
+}
+
+.tools-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.tools-logo {
+    width: 5rem;
+}
