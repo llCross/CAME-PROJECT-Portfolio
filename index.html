@@ -4,27 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Group Portfolio</title>
 </head>
 <body>
     
-    <nav>
-        
+    <nav id="home">
         <div id="home-logo">Group 7</div>
         <ul id="nav-titles">
-            <li>About Us</li>
-            <li>Highlights</li>
-            <li>Tools</li>
-            <li>Contact Us</li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
 
-    <div id="header">
+    <header>
         <p>Group 7</p>
-    </div>
+    </header>
 
+    <main>
+        <div id="about">
+            
+            <div class="about-img">
+                <img src="/assets/sample.png">
+            </div>
 
+            <div class="about-container">
+                <h1>About Us</h1>
+                <div class="about-names">
+                    <p class="name-link active-link">Berania</p>
+                    <p class="name-link">Aggabao</p>
+                    <p class="name-link">Yonzon</p>
+                    <p class="name-link">Delos Santos</p>
+                </div>
+                <div class="about-details active-details" id="berania-details">
+                    <p class="about-name">Berania, Patrick Louise O.</p>
+                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
+                    <p  class="about-motto">"Try and try until you die"</p>
+                </div>
+                <div class="about-details" id="aggabao-details">
+                    <p class="about-name">Aggabao, Jericho</p>
+                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
+                    <p  class="about-motto">"Try and try until you die"</p>
+                </div>
+                <div class="about-details" id="yonzon-details">
+                    <p class="about-name">Yonzon, Rolando</p>
+                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
+                    <p  class="about-motto">"Try and try until you die"</p>
+                </div>
+                <div class="about-details" id="delossantos-details">
+                    <p class="about-name">Delos Santos, Arnold</p>
+                    <p  class="about-description">A 3rd Year BS in Mechanical Engineering Student in PUP</p>
+                    <p  class="about-motto">"Try and try until you die"</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="highlights">
+            <div class="highlights-title">
+                Highlights
+            </div>
+            <div class="highlights-container">
+                <div class="highlights-details">1</div>
+                <div class="highlights-details">2</div>
+                <div class="highlights-details">3</div>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>

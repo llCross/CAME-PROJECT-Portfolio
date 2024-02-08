@@ -1,11 +1,25 @@
 * {
+    /* border: red solid 2px; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --accent-color: #ff004f;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 nav {
-    background-image: url(/assets/parallax-bg.jpg);
     background-color: black;
     color: white;
     display: flex;
@@ -27,16 +41,136 @@ nav {
     font-size: 1rem;
 }
 
-#header {
-    background-image: url(/assets/parallax-bg.jpg);
-    /* background-attachment: fixed; */
-    height: 1280px;
+#nav-titles li a {
+    position: relative;
+}
+
+#nav-titles li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#nav-titles li a:hover::after {
+    width: 100%;
+}
+
+header {
+    background-image: url(/assets/parallax-bg2.jpg);
+    background-attachment: fixed;
+    height: 966px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#header p {
+header p {
     color: white;
     font-size: 15rem;
+}
+
+#about {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 90vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    border-radius: 50px;
+    height: 80%;
+    width: 80%;
+}
+
+.about-container {
+    height: 90%;
+}
+
+.about-container ul li {
+    list-style: none;
+}
+
+.about-container h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.about-names {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 2rem;
+    margin: 1rem 0;
+}
+
+.name-link {
+    position: relative;
+}
+
+.name-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.name-link.active-link::after {
+    width: 100%;
+}
+
+.about-details {
+    display: none;
+}
+
+.about-details.active-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-name {
+    font-size: 3rem;
+}
+
+#highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+}
+
+.highlights-title {
+    font-size: 6rem;
+}
+
+.highlights-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.highlights-details {
+    background-color: #ff004f;
+    border-radius: 50px;
+    width: 500px;
+    height: 500px;
 }
