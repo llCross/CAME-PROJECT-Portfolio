@@ -64,7 +64,7 @@ nav {
 }
 
 header {
-    background-image: url(/assets/parallax-bg2.jpg);
+    background-image: url(assets/parallax-bg2.jpg);
     background-attachment: fixed;
     height: 966px;
     display: flex;
