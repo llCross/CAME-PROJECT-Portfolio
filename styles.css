@@ -195,3 +195,39 @@ header p {
 .tools-logo {
     width: 5rem;
 }
+
+#wipo-logo {
+    width: 7rem;
+}
+
+#contact-us {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.contact-title {
+    font-size: 5rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-fields,
+.form-text {
+    width: 30rem;
+    border-radius: 10px;
+}
+
+.form-fields {
+    height: 3rem;
+}
+
+.form-text {
+    height: 10rem;
+}
