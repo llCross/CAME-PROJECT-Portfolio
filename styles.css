@@ -74,7 +74,7 @@ li {
 /* ----------Header Design---------- */
 
 header {
-    background-image: url('../assets/parallax-bg2.jpg');
+    background-image: url(../assets/parallax-bg2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -360,7 +360,7 @@ footer {
     }
 
     header {
-        background-image: url('../assets/parallax-bg-mobile.jpg');
+        background-image: url(../assets/parallax-bg-mobile.jpg);
         background-position: center bottom;
     }
 
