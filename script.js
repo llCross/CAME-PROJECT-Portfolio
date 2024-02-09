@@ -1,14 +1,42 @@
 const nameLink = document.querySelectorAll('.name-link');
+
 const aboutDetails = document.querySelectorAll('.about-details');
 const beraniaDetails = document.querySelector('#berania-details');
 const aggabaoDetails = document.querySelector('#aggabao-details');
 const yonzonDetails = document.querySelector('#yonzon-details');
 const delossantosDetails = document.querySelector('#delossantos-details');
 
+const aboutPhotos = document.querySelectorAll('.about-profile');
+const beraniaPhoto = document.querySelector('#berania-photo');
+const aggabaoPhoto = document.querySelector('#aggabao-photo');
+const yonzonPhoto = document.querySelector('#yonzon-photo');
+const delossantosPhoto = document.querySelector('#delossantos-photo');
+
+const sideMenu = document.querySelector('.nav-titles');
+const openButton = document.querySelector('#menu-button');
+const closeButton = document.querySelector('#close-menu-button');
+
+openButton.addEventListener('click', () => {
+    showMenu();
+});
+
+closeButton.addEventListener('click', () => {
+    closeMenu();
+});
+
+function showMenu() {
+    sideMenu.style.right = "0";
+}
+
+function closeMenu() {
+    sideMenu.style.right = "-200px";
+}
+
 nameLink.forEach(link => {
     link.addEventListener('click', () => {
         showLink(link);
         showDetails(link);
+        showPhoto(link);
     });
 });
 
@@ -25,7 +53,6 @@ function showDetails(clickedLink) {
     });
 
     if (clickedLink.innerText === 'Berania') {
-        console.log('Berania yey!');
         beraniaDetails.classList.add('active-details');
     } else if (clickedLink.innerText === 'Aggabao') {
         aggabaoDetails.classList.add('active-details');
@@ -33,6 +60,24 @@ function showDetails(clickedLink) {
         yonzonDetails.classList.add('active-details');
     } else if (clickedLink.innerText === 'Delos Santos') {
         delossantosDetails.classList.add('active-details');
+    } else {
+        console.log(clickedLink.innerText);
+    }
+};
+
+function showPhoto(clickedLink) {
+    aboutPhotos.forEach(photo => {
+        photo.classList.remove('active-photo');
+    });
+
+    if (clickedLink.innerText === 'Berania') {
+        beraniaPhoto.classList.add('active-photo');
+    } else if (clickedLink.innerText === 'Aggabao') {
+        aggabaoPhoto.classList.add('active-photo');
+    } else if (clickedLink.innerText === 'Yonzon') {
+        yonzonPhoto.classList.add('active-photo');
+    } else if (clickedLink.innerText === 'Delos Santos') {
+        delossantosPhoto.classList.add('active-photo');
     } else {
         console.log(clickedLink.innerText);
     }
