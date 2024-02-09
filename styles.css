@@ -167,6 +167,7 @@ header p {
 
 .name-link {
     position: relative;
+    cursor: pointer;
 }
 
 .name-link::after {
@@ -235,6 +236,13 @@ header p {
     align-items: center;
     padding: 30px;
     font-size: 24px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.highlights-details:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-30px);
+    cursor: default;
 }
 
 /* ----------Tools Design---------- */
@@ -257,10 +265,15 @@ header p {
 
 .tools-logo {
     width: 100px;
+    transition: 0.5s;
 }
 
 #wipo-logo {
     width: 130px;
+}
+
+.tools-logo:hover {
+    transform: translateY(-30px);
 }
 
 /* ----------Contact-Us Design---------- */
