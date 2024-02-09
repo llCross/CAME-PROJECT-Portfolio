@@ -9,12 +9,16 @@
 :root {
     --accent-color: #ff004f;
     --background-color: #262626;
-    --title-size: 4rem;
+    --title-size: 72px;
+    --border-radius: 20px;
+    --title-mobile: 52px;
+    --bottom-margin: 50px;
 }
 
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 a {
@@ -22,26 +26,30 @@ a {
     color: white;
 }
 
-nav {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 10rem;
-    position: fixed;
-    width: 100vw;
-}
-
-#home-logo {
-    font-size: 2rem;
-}
-
-#nav-titles {
-    display: flex;
-    gap: 2rem;
+li {
     list-style: none;
-    font-size: 1rem;
+}
+
+/* ----------Nav Design---------- */
+
+#home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.home-logo {
+    font-size: 34px;
+}
+
+.nav-titles {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons {
+    display: none;
 }
 
 #nav-titles li a {
@@ -63,27 +71,29 @@ nav {
     width: 100%;
 }
 
+/* ----------Header Design---------- */
+
 header {
     background-image: url('/assets/parallax-bg2.jpg');
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 966px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header p {
-    color: white;
-    font-size: 15rem;
+    font-size: 200px;
 }
 
+/* ----------About Design---------- */
+
 #about {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 90vh;
     align-items: center;
-    flex-wrap: wrap;
+    height: 100vh;
 }
 
 .about-title {
@@ -94,36 +104,56 @@ header p {
 }
 
 .about-img {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .about-img img {
-    border-radius: 50px;
     height: 80%;
-    width: 80%;
+    border-radius: var(--border-radius);
 }
 
 .about-container {
-    border-radius: 50px;
-    height: 80%;
-    width: 95%;
-    background-color: var(--background-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-container ul li {
-    list-style: none;
+.about-box {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    width: 90%;
+    height: 80%;
 }
 
 .about-names {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    height: 2rem;
-    margin: 1rem 0;
+    font-size: 24px;
+    padding: 5px;
 }
+
+.about-name {
+    font-size: 72px;
+}
+
+.about-description {
+    font-size: 24px;
+}
+
+.about-motto {
+    text-align: end;
+    font-size: 32px;
+}
+
+.about-details {
+    display: none;
+}
+
+/* ----------about-javascript-effect---------- */
 
 .name-link {
     position: relative;
@@ -145,60 +175,65 @@ header p {
 }
 
 .about-details {
-    margin: 1rem 2rem 0 4rem;
+    padding: 0 30px;
     display: none;
 }
 
 .about-details.active-details {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 20px;
 }
 
-.about-description {
-    font-size: 1.5rem;
-}
-
-.about-motto {
-    font-style: italic;
-    font-size: 2rem;
-    text-align: end;
-}
-
-.about-name {
-    font-size: 4rem;
-}
+/* ----------Highlights Design---------- */
 
 #highlights {
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    height: 90vh;
 }
 
 .highlights-title {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlights-title p {
     font-size: var(--title-size);
 }
 
 .highlights-container {
+    width: 100%;
+    height: 60%;
     display: flex;
-    gap: 3rem;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .highlights-details {
     background-color: var(--background-color);
-    border-radius: 50px;
-    width: 25rem;
-    height: 25rem;
+    border-radius: var(--border-radius);
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 24px;
 }
 
+/* ----------Tools Design---------- */
 #tools {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    gap: 50px;
 }
 
 .tools-title {
@@ -207,78 +242,75 @@ header p {
 
 .tools-container {
     display: flex;
-    gap: 3rem;
+    gap: 50px;
 }
 
 .tools-logo {
-    width: 5rem;
+    width: 100px;
 }
 
 #wipo-logo {
-    width: 7rem;
+    width: 130px;
 }
+
+/* ----------Contact-Us Design---------- */
 
 #contact-us {
     display: flex;
-    height: 90vh;
+    height: 97vh;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 100px;
 }
 
-#contact-us p {
-    font-size: var(--title-size);
-}
-
-.contact-title {
-    font-size: var(--title-size);
-}
-
-.form-title {
+#contact-us p,
+.contact-title,
+.form-title     {
     font-size: var(--title-size);
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 10px;
     align-items: center;
 }
 
 .form-fields,
 .form-text {
-    width: 30rem;
+    width: 600px;
     border-radius: 10px;
     background-color: var(--background-color);
 }
 
 .form-fields {
-    height: 3rem;
+    height: 40px;
 }
 
 .form-text {
-    height: 10rem;
+    height: 200px;
 }
 
 .submit-button {
     background-color: var(--accent-color);
     color: white;
     border-radius: 10px;
-    font-size: 1.5rem;
-    width: 10rem;
-    height: 3rem;
+    font-size: 1.5em;
+    width: 180px;
+    height: 50px;
 }
 
 .submit-button:hover {
     cursor: pointer;
 }
 
+
 .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 50px;
 }
 
 .email-container {
@@ -286,17 +318,175 @@ header p {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 2rem;
+    gap: 30px;
 }
 
 .contact-emails {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
+    gap: 10px;
+    font-size: 24px;
 }
 
 .contact-emails img {
-    width: 2rem;
+    width: 50px;
+}
+
+/* ----------Footer Design---------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    height: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .nav-titles {
+        display: none;
+    }
+
+    #menu-button {
+        display: block;
+        width: 50px;
+    }
+
+    header {
+        background-image: url(/assets/parallax-bg-mobile.jpg);
+        background-position: center bottom;
+    }
+
+    header p {
+        font-size: var(--title-mobile);
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+        margin-bottom: var(--bottom-margin);
+    }
+
+    .about-title {
+        font-size: var(--title-mobile);
+        grid-column: 1 / 2;
+    }
+
+    .about-img img {
+        width: 80%;
+    }
+
+    .about-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .about-box {
+        width: 90%;
+        flex-grow: 1;
+        padding-bottom: 10px;
+    }
+
+    .about-names {
+        font-size: 12px;
+    }
+
+    .about-name {
+        font-size: 32px;
+    }
+
+    .about-description {
+        font-size: 18px;
+    }
+
+    .about-motto {
+        font-size: 24px;
+    }
+
+    #highlights {
+        height: auto;
+        margin-bottom: var(--bottom-margin);
+    }
+
+    .highlights-title {
+        margin-bottom: var(--bottom-margin);
+    }
+
+    .highlights-title p {
+        font-size: var(--title-mobile);
+    }
+
+    .highlights-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .highlights-details {
+        height: 300px;
+        width: 80%;
+        font-size: 13px;
+    }
+
+    #tools {
+        margin-bottom: var(--bottom-margin);
+    }
+
+    .tools-title {
+        font-size: var(--title-mobile);
+        text-align: center;
+    }
+
+    .tools-container {
+        gap: 30px;
+    }
+
+    .tools-logo {
+        width: 50px;
+    }
+
+    #wipo-logo {
+        width: 75px;
+    }
+
+    #contact-us {
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: var(--bottom-margin);
+    }
+
+    #contact-us p,
+    .contact-title,
+    .form-title     {
+        font-size: var(--title-mobile);
+        text-align: center;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact-emails img {
+        width: 20px;
+    }
+
+    .contact-emails {
+        font-size: 10px;
+        gap: 2px;
+    }
+
+    .form-fields,
+    .form-text {
+        width: 300px;
+    }
+
+
 }
