@@ -27,7 +27,7 @@ a {
 }
 
 li {
-    list-style: none;
+    list-style: circle;
 }
 
 /* ----------Nav Design---------- */
@@ -40,6 +40,10 @@ nav {
     align-items: center;
     padding: 10px 0;
     position: fixed;
+}
+
+nav li {
+    list-style: none;
 }
 
 .home-logo {
@@ -77,7 +81,7 @@ nav {
 /* ----------Header Design---------- */
 
 header {
-    background-image: url(../assets/parallax-bg2.jpg);
+    background-image: url('assets/parallax-bg2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -232,12 +236,18 @@ header p {
     height: 500px;
     width: 500px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     padding: 30px;
-    font-size: 24px;
+    font-size: 14px;
     transition: background 0.5s, transform 0.5s;
 }
+
+.highlights-details p {
+    font-size: 24px;
+}
+
 
 .highlights-details:hover {
     background-color: var(--accent-color);
@@ -263,17 +273,20 @@ header p {
     gap: 50px;
 }
 
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .tools-logo {
     width: 100px;
+    height: 100px;
     transition: 0.5s;
 }
 
-#wipo-logo {
-    width: 130px;
-}
-
 .tools-logo:hover {
-    transform: translateY(-30px);
+    transform: translateY(-50px);
 }
 
 /* ----------Contact-Us Design---------- */
@@ -356,6 +369,20 @@ header p {
     width: 50px;
 }
 
+/* ----------Scroll Animation---------- */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    }
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 /* ----------Footer Design---------- */
 
 footer {
@@ -403,7 +430,7 @@ footer {
     }
 
     header {
-        background-image: url(../assets/parallax-bg-mobile.jpg);
+        background-image: url('assets/parallax-bg-mobile.jpg');
         background-position: center bottom;
     }
 

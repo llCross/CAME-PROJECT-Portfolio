@@ -82,3 +82,28 @@ function showPhoto(clickedLink) {
         console.log(clickedLink.innerText);
     }
 };
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// const toolsLogo = document.querySelector('.tools-logo');
+// const logoTitles = document.querySelector('.logo-titles');
+
+// toolsLogo.addEventListener('mouseenter', () => {
+//     logoTitles.classList.add = 'active-logo';
+// });
+
+// toolsLogo.addEventListener('mouseleave', () => {
+//     logoTitles.classList.remove = 'active-logo';
+// });
