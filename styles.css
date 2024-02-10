@@ -37,12 +37,13 @@ li {
 
 nav {
     width: 100vw;
-    background-color: transparent;
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
     position: fixed;
+    z-index: 1;
 }
 
 nav li {
@@ -104,6 +105,7 @@ header p {
     grid-template-columns: 1fr 2fr;
     align-items: center;
     height: 100vh;
+    margin-bottom: var(--bottom-margin);
 }
 
 .about-title {
@@ -248,7 +250,7 @@ header p {
 }
 
 .highlights-details p {
-    font-size: 24px;
+    font-size: 32px;
 }
 
 
@@ -460,6 +462,7 @@ footer {
     }
 
     #about {
+        height: auto;
         grid-template-columns: 1fr;
         margin-bottom: var(--bottom-margin);
     }
@@ -524,9 +527,17 @@ footer {
     }
 
     .highlights-details {
-        height: 300px;
-        width: 80%;
-        font-size: 13px;
+        height: 350px;
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .highlights-details p {
+        font-size: 18px;
+    }
+
+    .highlights-details:hover {
+        transform: translateY(-10px);
     }
 
     #tools {
@@ -543,11 +554,8 @@ footer {
     }
 
     .tools-logo {
+        height: 50px;
         width: 50px;
-    }
-
-    #wipo-logo {
-        width: 75px;
     }
 
     #contact-us {
