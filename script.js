@@ -96,14 +96,3 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-
-// const toolsLogo = document.querySelector('.tools-logo');
-// const logoTitles = document.querySelector('.logo-titles');
-
-// toolsLogo.addEventListener('mouseenter', () => {
-//     logoTitles.classList.add = 'active-logo';
-// });
-
-// toolsLogo.addEventListener('mouseleave', () => {
-//     logoTitles.classList.remove = 'active-logo';
-// });
