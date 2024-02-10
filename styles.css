@@ -1148,6 +1148,7 @@ footer {
     .tools-title {
         font-size: var(--title-mobile);
         text-align: center;
+        padding: 0 20px;
     }
 
     .tools-container {
